@@ -50,6 +50,21 @@ public class MediaLib
       System.out.println("Cannot add a new song: A song already exists");
   }
 
+  public void addBook(String title, String author)
+  {
+    addBook(new Book(title, author));
+  }
+
+  public void addMovie(String title, double duration)
+  {
+    addMovie(new Movie(title, duration));
+  }
+
+  public void addSong(String title)
+  {
+    addSong(new Song(title));
+  }
+
   public static String getOwner()
   {
     return owner;
@@ -59,7 +74,7 @@ public class MediaLib
   {
     owner = o;
   }
-
+  
   public static int getNumEntries()
   {
     return numEntries;
